@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .cart-icon {
+            width: 30px;
+            cursor: pointer;
+        }
+        .home-button {
+            padding: 10px 15px;
+            background-color: black;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .home-button:hover {
+            background-color: #d3ad7f;
+        }
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .product {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            width: 300px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .product img {
+            max-width: 100%;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 15px;
+        }
+        .product h2 {
+            font-size: 1.5em;
+            margin: 15px 0 10px;
+            color: #333;
+        }
+        .product p {
+            margin: 0 0 10px;
+            color: #555;
+        }
+        .product .price {
+            font-size: 1.2em;
+            color: #333;
+            font-weight: bold;
+        }
+        .product .code {
+            font-size: 1em;
+            color: #888;
+            margin-bottom: 5px;
+        }
+        .product .quantity {
+            font-size: 1em;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        .product button {
+            padding: 10px 15px;
+            background-color: black;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            width: 100%;
+        }
+        .product button:hover {
+            background-color: #d3ad7f;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="cart.png" alt="Cart" class="cart-icon" onclick="goToCart()">
+        <button class="home-button" onclick="goToHome()">Home</button> 
+    </div>
+    <h1>Product List</h1>
+    <div class="product-list">
+        <div class="product" data-code="P001" data-quantity="10">
+            <img src="new1.webp" alt="Product 1">
+            <h2>Hustle Jacket</h2>
+            <p class="code">Code: P001</p>
+            <p class="quantity">Quantity: 10</p>
+            <p>Chic and stylish varsity jacket perfect for any occasion.</p>
+            <p class="price">P519.00</p>
+            <button onclick="addToCart('P001', 'Hustle Jacket', 519.00, 'new1.webp')">Add to Cart</button>
+        </div>
+        <div class="product" data-code="P002" data-quantity="15">
+            <img src="new2.webp" alt="Product 2">
+            <h2>Dark Harvest Jacket</h2>
+            <p class="code">Code: P002</p>
+            <p class="quantity">Quantity: 15</p>
+            <p>Elevate your look with our premium quality varsity jackets.</p>
+            <p class="price">P529.00</p>
+            <button onclick="addToCart('P002', 'Dark Harvest Jacket', 529.00, 'new2.webp')">Add to Cart</button>
+        </div>
+        <div class="product" data-code="P003" data-quantity="8">
+            <img src="new3.webp" alt="Product 3">
+            <h2>CampBlue Jacket</h2>
+            <p class="code">Code: P003</p>
+            <p class="quantity">Quantity: 8</p>
+            <p>Timeless design meets contemporary fashion in our varsity jackets.</p>
+            <p class="price">P439.00</p>
+            <button onclick="addToCart('P003', 'CampBlue Jacket', 439.00, 'new3.webp')">Add to Cart</button>
+        </div>
+        <!-- Additional Products -->
+        <div class="product" data-code="P004" data-quantity="7">
+            <img src="new4.webp" alt="Product 4">
+            <h2>Aywter Patch Jacket</h2>
+            <p class="code">Code: P004</p>
+            <p class="quantity">Quantity: 7</p>
+            <p>Sporty elegance for the fashion-forward woman.</p>
+            <p class="price">P299.00</p>
+            <button onclick="addToCart('P004', 'Aywter Patch Jacket', 299.00, 'new4.webp')">Add to Cart</button>
+        </div>
+        <div class="product" data-code="P005" data-quantity="12">
+            <img src="new5.webp" alt="Product 5">
+            <h2>Cozy Green Jacket</h2>
+            <p class="code">Code: P005</p>
+            <p class="quantity">Quantity: 12</p>
+            <p>Stand out from the crowd in our eye-catching varsity jackets.</p>
+            <p class="price">P399.00</p>
+            <button onclick="addToCart('P005', 'Cozy Green Jacket', 399.00, 'new5.webp')">Add to Cart</button>
+        </div>
+        <div class="product" data-code="P006" data-quantity="9">
+            <img src="new6.webp" alt="Product 6">
+            <h2>Classic Alpha Jacket</h2>
+            <p class="code">Code: P006</p>
+            <p class="quantity">Quantity: 9</p>
+            <p>Classic varsity style with a modern twist for women.</p>
+            <p class="price">P349.00</p>
+            <button onclick="addToCart('P006', 'Classic Alpha Jacket', 349.00, 'new6.webp')">Add to Cart</button>
+        </div>
+    </div>
+    <script>
+        function addToCart(code, name, price, image) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const product = document.querySelector(`.product[data-code="${code}"]`);
+            let quantity = parseInt(product.dataset.quantity);
+            
+            if (quantity > 0) {
+                cart.push({ code, name, price, image });
+                localStorage.setItem('cart', JSON.stringify(cart));
+                alert('Product added to cart');
+                
+                quantity -= 1;
+                product.dataset.quantity = quantity;
+                product.querySelector('.quantity').textContent = `Quantity: ${quantity}`;
+            } else {
+                alert('This product is out of stock.');
+            }
+        }
+
+        function goToCart() {
+            window.location.href = 'cart.html';
+        }
+
+        function goToHome() { 
+            window.location.href = 'index.html'; 
+        }
+    </script>
+</body>
+</html>

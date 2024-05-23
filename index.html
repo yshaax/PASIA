@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusChic Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #000;
+        }
+        header {
+            background-color: #000;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        header img {
+            max-width: 100px;
+        }
+        nav {
+            background-color: #fff;
+            border-bottom: 1px solid #000;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            display: inline-block;
+            color: #000;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        nav ul li a:hover {
+            background-color: #000;
+            color: #fff;
+        }
+        .feature-collection {
+            background-color: #fff;
+            color: black;
+            padding: 20px;
+            text-align: center;
+        }
+        .feature-collection h2 {
+            margin-bottom: 20px;
+        }
+        .collection-item {
+            display: inline-block;
+            margin: 20px;
+            width: 30%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            background-color: #f8f8f8; 
+        }
+        .collection-item img {  
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }      
+        .collection-item h3 {
+            font-size: 20px;
+        }
+        .collection-item p {
+            font-size: 14px;
+        }   
+        .collection-item .btn {
+            display: inline-block;
+            background-color: black;
+            color: #fff;
+            padding: 5px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .collection-item .btn:hover {       
+            background-color: green;
+        }   
+        section {
+            padding: 20px;
+            background-color: #f8f8f8;
+        }
+        article {
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid #000;
+            background-color: #f8f8f8; 
+        }
+        footer {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        .testimonials, .shop-article {
+            margin: 20px 0;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .product-img {
+            max-width: 300px;
+            display: block;
+            margin: 0 auto;
+        }
+        .testimonial-img {
+            border-radius: 50%;
+            max-width: 100px;
+            margin-bottom: 20px;
+            border: 2px solid #000;
+        }
+        .testimonials {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            text-align: center;
+            background-color: #f8f8f8; 
+            padding: 20px; 
+        }
+        .testimonial-content {
+            flex: 1;
+            max-width: 30%;
+            border: 1px solid #000;
+            padding: 20px;
+            margin: 10px;
+        }
+        .shop-article {
+            margin: 20px 0;
+            margin-bottom: 100px; 
+        }   
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .footer-links a {
+            margin: 0 10px;
+            color: #fff;
+            text-decoration: none;
+        }
+        @media screen and (max-width: 768px) {
+            .collection-item {
+                width: 45%;
+                margin: 10px;
+            }
+            .testimonial-content {
+                max-width: 45%;
+            }
+        }
+        @media screen and (max-width: 480px) {
+            .collection-item {
+                width: 90%;
+                margin: 10px auto;
+            }
+            .testimonial-content {
+                max-width: 90%;
+                margin: 10px auto;
+            }
+            nav ul li {
+                display: block;
+                width: 100%;
+            }
+            nav ul li a {
+                display: block;
+                width: 100%;
+                padding: 10px;
+            }
+            .container {
+                width: 100%;
+                padding: 0 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="campus.png" alt="CampusChic Logo">
+        </div>
+    </header>
+    
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="product.html">Shop</a></li>
+                <li><a href="about.html">About CampusChic</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="feature-collection">
+        <h2>Featured Collection</h2>
+        <div class="collection-item" data-product-id="1">
+            <img src="p1.webp" alt="Product 1">
+            <h3>Green Bomber Jacket</h3>
+            <div class="content">
+                <a href="#" class="btn">Buy Now</a>
+            </div>
+        </div>
+        <div class="collection-item"data-product-id="2">
+            <img src="p2.webp" alt="Product 2">
+            <h3>Brown Fire</h3>
+            <div class="content">
+                <a href="#" class="btn">Buy Now</a>
+            </div>
+        </div>
+        <div class="collection-item" data-product-id="3">
+            <img src="p3.webp" alt="Product 3">
+            <h3>Black Air Wheel</h3>
+            <div class="content">
+                <a href="#" class="btn">Buy Now</a>
+            </div>
+        </div>
+        <div class="collection-item" data-product-id="4">
+            <img src="p4.webp" alt="Product 4">
+            <h3>White Stripes</h3>
+            <div class="content">
+                <a href="#" class="btn">Buy Now</a>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <h2>Client Testimonials</h2>
+            <div class="testimonials">
+                <div class="testimonial-content">
+                    <img src="r1.webp" alt="Jane Doe" class="testimonial-img">
+                    <article>
+                        <h3>Jane Doe</h3>
+                        <p>"I love my new varsity jacket from CampusChic! It's comfortable and looks great."</p>
+                    </article>
+                </div>
+                <div class="testimonial-content">
+                    <img src="r2.jpg" alt="Mary Smith" class="testimonial-img">
+                    <article>
+                        <h3>Mary Smith</h3>
+                        <p>"The jackets are fantastic quality. Perfect for everyday wear."</p>
+                    </article>
+                </div>
+                <div class="testimonial-content">
+                    <img src="r3.jpg" alt="Emily Johnson" class="testimonial-img">
+                    <article>
+                        <h3>Emily Johnson</h3>
+                        <p>"Excellent customer service and fast shipping. Highly recommend CampusChic!"</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <h2>Latest Update</h2>
+            <article class="shop-article">
+                <h3>Discover the Timeless Style of Varsity Jackets</h3>
+                <img src="campusbg.png" alt="About CampusChic" class="product-img">
+                <p>Exciting news from CampusChic! We've recently expanded our collection to include even more stunning varsity jackets that effortlessly blend classic charm with contemporary flair. From bold color combinations to intricate detailing, each jacket is a testament to our ongoing commitment to craftsmanship and innovation.</p>
+                <p>As we continue to grow and evolve, we want to express our heartfelt gratitude to our loyal customers who have supported us on this journey. Your feedback and enthusiasm inspire us to push the boundaries of creativity and innovation, and we can't wait to share even more exciting updates with you in the days to come. Stay tuned for what's next at CampusChic – the best is yet to come!</p>
+            </article>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 CampusChic Store. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="https://www.facebook.com/YssaClarisse/">Facebook</a>
+                <a href="https://x.com/yssclrssps">Twitter</a>
+                <a href="https://www.instagram.com/yssclrssang/">Instagram</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.querySelectorAll('.collection-item .btn').forEach(button => {
+            button.addEventListener('click', function(event) {
+                event.preventDefault();
+                const productId = this.closest('.collection-item').getAttribute('data-product-id');
+                window.location.href = `product.html?id=${productId}`;
+            });
+        });
+    </script>
+</body>
+</html>

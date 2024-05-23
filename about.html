@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About CampusChic</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+        color: #333;
+        line-height: 1.6;
+    }
+    header {
+        text-align: center;
+        padding: 1em;
+        background-color: #000;
+        color: white;
+    }
+    .home-button {
+        padding: 10px 20px;
+        background-color: black;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    .home-button:hover {
+        background-color: #d3ad7f;
+    }
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2em;
+    }
+    h1, h2, h3 {
+        color: black;
+        margin-bottom: 0.5em;
+    }
+    p {
+        margin-bottom: 1.5em;
+    }
+    .profile {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 2em;
+    }
+    .owner-image {
+        width: 150px; 
+        height: 150px; 
+        object-fit: cover; 
+        border-radius: 50%;
+        margin-right: 1em;
+        border: 3px solid black;
+    }
+    .profile div {
+        max-width: 600px;
+    }
+    .profile h3 {
+        margin: 0;
+    }
+    @media (max-width: 600px) {
+        .profile {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .owner-image {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 1em;
+        }
+    }
+</style>
+</head>
+<body>
+    <header>
+        <h1>About CampusChic</h1>
+        <button class="home-button" onclick="goToHome()">Home</button>
+    </header>
+    <div class="container">
+        <h2>Our Story</h2>
+        <p>In the bustling world of online fashion, there emerges a digital sanctuary for those who seek the perfect blend of timeless charm and contemporary flair. Welcome to CampusChic, your premier destination for varsity jackets reimagined for the modern woman.</p>
+        <p>Founded in the Year 2022 with a passion for the iconic style immortalized in movies and cherished in memories, CampusChic is the brainchild of a visionary entrepreneur whose love affair with varsity jackets knows no bounds. Inspired by the vibrant energy of urban landscapes and the eclectic spirit of individuality, our founder set out to create a collection that transcends the confines of tradition and embraces the ever-evolving landscape of fashion.</p>
+        <p>At CampusChic, we believe that style is not just about what you wear – it's a reflection of who you are. That's why each of our varsity jackets is meticulously crafted to embody the perfect fusion of classic aesthetics and contemporary trends, ensuring that you can make a statement that's uniquely yours, no matter where life takes you.</p>
+        <p>So whether you're a trendsetter looking to make a bold statement or a minimalist seeking subtle sophistication, we invite you to embark on a journey of style and self-discovery with CampusChic. Because when it comes to fashion, the possibilities are limitless – and with CampusChic, the adventure is just beginning.</p>
+        <h2>Meet the Founder</h2>
+        <div class="profile">
+            <img class="owner-image" src="owner.jpg" alt="Founder's Profile Picture">
+            <div>
+                <h3>Yssa Clarisse Pasia</h3>
+                <p><strong>Founder & CEO</strong></p>
+                <p>Meet Yssa, the founder and creative mind behind CampusChic. With a deep-rooted passion for fashion ignited by the iconic varsity jackets she adored in movies, Yssa embarked on a journey to bring her vision of timeless style to life. Fuelled by her love for blending classic charm with contemporary trends, Yssa envisioned CampusChic as more than just an ecommerce boutique – it's a destination where women can discover varsity-inspired fashion that speaks to their individuality.</p>
+                <p>Driven by her creative spirit and unwavering dedication to craftsmanship, Yssa infuses each CampusChic design with her distinctive touch. Drawing upon her background in design and her keen eye for detail, she curates a collection that transcends the boundaries of tradition, offering jackets that are as versatile as they are stylish. As the heart and soul of CampusChic, Yssa continues to inspire women to embrace their unique sense of style and rewrite the rules of fashion with confidence and creativity.</p>
+            </div>
+        </div>
+        <h2>Our Mission</h2>
+        <p>At CampusChic, our mission is to empower women to express their individuality and confidence through timeless style. We believe that fashion is more than just clothing – it's a form of self-expression, a way to showcase one's personality and story to the world. That's why we're dedicated to curating a collection of varsity jackets that not only pay homage to classic aesthetics but also celebrate the diverse tastes and preferences of our community. With an unwavering commitment to inclusivity and authenticity, we strive to create a space where every woman feels seen, heard, and inspired to embrace her unique journey with pride.</p>
+        <p>Driven by a passion for creativity and innovation, our mission extends beyond providing stylish outerwear – it's about fostering a sense of belonging and empowerment among our customers. Whether you're a trendsetter, a minimalist, or somewhere in between, CampusChic is here to accompany you on your fashion journey, offering versatile pieces that effortlessly complement any style or occasion. With CampusChic, it's not just about following trends – it's about defining them, rewriting the rules, and celebrating the beauty of individuality in every stitch and seam.</p>
+    </div>
+
+    <script>
+        function goToHome() {
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>
